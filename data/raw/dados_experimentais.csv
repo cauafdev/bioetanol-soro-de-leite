@@ -1,0 +1,29 @@
+variavel,valor,unidade,origem,tipo,observacoes
+volume_soro_cru,250,mL,Experimento (relatorio secao 3.4),Medido,Soro de leite fresco obtido em laticinio local
+pH_soro_inicial,6.0,adimensional,Experimento (relatorio secao 3.4),Medido,
+pH_soro_acidificado,4.5-4.6,adimensional,Experimento (relatorio secao 3.4),Medido,Ponto isoeletrico das proteinas do soro
+temperatura_desproteinizacao,90-100,C,Experimento (relatorio secao 3.4),Medido,Faixa de processo em banho-maria
+tempo_aquecimento_desproteinizacao,15-30,min,Experimento (relatorio secao 3.4),Medido,Faixa de processo
+volume_filtrado_pos_desproteinizacao,160,mL,Experimento (relatorio secao 3.4),Medido,Filtracao a vacuo (Buchner)
+recuperacao_volume_filtracao,64.0,%,Experimento (relatorio secao 4.1 tabela 3),Calculado,160/250
+massa_lactase_adicionada,4.0047,g,Experimento (relatorio secao 3.4),Medido,Balanca analitica resolucao 0.1 mg
+atividade_enzimatica_estimada,106000,U.FCC,Experimento (relatorio secao 3.4),Calculado a partir do rotulo,10000 U.FCC/capsula x ~10.6 capsulas
+temperatura_hidrolise,37-40,C,Experimento (relatorio secao 3.3),Medido,Faixa de trabalho da lactase
+massa_fermento_biologico,4,g,Experimento (relatorio secao 3.4),Medido,Saccharomyces cerevisiae seco
+volume_mosto_fermentado,160,mL,Experimento (relatorio secao 3.4),Medido,
+temperatura_fermentacao,30,C,Experimento (relatorio secao 3.4),Medido,Incubadora de bancada
+tempo_fermentacao,72,h,Experimento (relatorio secao 3.4),Medido,15/09/2026 20h30 a 18/09/2026
+temperatura_coleta_destilacao,78,C,Experimento (relatorio secao 3.4),Medido,Destilacao fracionada
+volume_destilado_obtido,15,mL,Experimento (relatorio secao 4.1 tabela 3 e secao 4.3),Medido,Proveta graduada de 25 mL
+rendimento_destilado_sobre_mosto,9.4,% v/v,Experimento (relatorio secao 4.3 tabela 5),Calculado,15/160
+rendimento_destilado_sobre_soro,6.0,% v/v,Experimento (relatorio secao 4.1 e 4.3),Calculado,15/250
+rendimento_destilado_por_litro_soro,60,mL/L,Experimento (relatorio secao 4.1),Calculado,
+teste_chama,positivo,qualitativo,Experimento (relatorio secao 4.3),Medido (qualitativo),Combustao com chama sem coloracao visivel
+densidade_destilado,NAO_DETERMINADA,g/mL,Experimento (relatorio secao 4.3),FALTANTE,Nao medida nesta execucao
+teor_alcoolico_destilado,NAO_DETERMINADO,% v/v ou GL,Experimento (relatorio secao 4.3),FALTANTE,Depende da densidade nao medida
+teor_alcoolico_esperado_min,5,% v/v,Relatorio secao 4.6 (planejamento do projeto),Premissa de projeto (nao medida),Projecao pre-execucao antes de qualquer retificacao
+teor_alcoolico_esperado_max,12,% v/v,Relatorio secao 4.6 (planejamento do projeto),Premissa de projeto (nao medida),Projecao pre-execucao antes de qualquer retificacao
+custo_reagentes_total_adquirido,65.00,BRL,Experimento (relatorio secao 3.6 tabela 2),Medido,Lactase R$40 + fermento R$5 + bicarbonato R$20 (nao usado)
+custo_reagentes_efetivamente_usados,45.00,BRL,Experimento (relatorio secao 3.6),Medido,Lactase R$40 + fermento R$5
+custo_soro_leite,NAO_CONTABILIZADO,BRL,Experimento (relatorio secao 3.6),Nao medido,Obtido em laticinio local sem custo registrado
+custo_equipamentos_laboratorio,NAO_CONTABILIZADO,BRL,Experimento (relatorio secao 3.6),Nao medido,Cedidos pelo Laboratorio G-Oleo/UFLA
