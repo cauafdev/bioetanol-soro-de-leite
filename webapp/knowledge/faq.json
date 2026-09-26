@@ -1,0 +1,129 @@
+[
+  {
+    "id": "etanol_produzido",
+    "keywords": [
+      "quanto de etanol foi produzido", "quanto etanol foi produzido",
+      "quantos ml de etanol", "volume de etanol produzido",
+      "quanto etanol voces produziram", "quanto etanol conseguiram",
+      "quanto de destilado foi obtido", "quanto destilado foi produzido"
+    ],
+    "answer": "No experimento, foram obtidos **15 mL de destilado** (Medido — proveta graduada de 25 mL), a partir de 160 mL de mosto fermentado (rendimento de 9,4% v/v). É importante notar: o **teor alcoólico desse destilado nunca foi medido** (a densidade não foi determinada), então não é correto dizer \"15 mL de etanol puro\" — apenas o volume do destilado é um dado medido. Há evidências indiretas de que é etanol (temperatura de coleta ≈78°C, teste de chama positivo sem coloração visível), mas a concentração exata é uma lacuna conhecida do projeto."
+  },
+  {
+    "id": "teor_alcoolico",
+    "keywords": [
+      "teor alcoolico do destilado", "teor alcoólico do destilado",
+      "graduacao alcoolica", "quantos graus tem o destilado",
+      "gl do destilado", "porcentagem de alcool"
+    ],
+    "answer": "Essa é a maior lacuna do projeto: **o teor alcoólico do destilado nunca foi medido** (dependeria da densidade, que também não foi determinada nesta execução). Para os cálculos de cenários técnicos, o projeto usa como **premissa de projeto** a faixa de 5% a 12% v/v (pré-retificação), que é uma expectativa definida antes do experimento — não uma medição. Há evidências indiretas de que o destilado contém etanol (temperatura de coleta ≈78°C, teste de chama positivo), mas sem quantificação exata."
+  },
+  {
+    "id": "viabilidade_economica",
+    "keywords": [
+      "viavel economicamente", "viável economicamente", "vale a pena financeiramente",
+      "compensa financeiramente", "da lucro", "dá lucro", "e lucrativo", "é lucrativo",
+      "e rentavel", "é rentável"
+    ],
+    "answer": "Não é possível concluir isso de forma definitiva com os dados atuais. Nos três cenários calculados (conservador/experimental/otimista), o custo de produção fica em torno de **R$ 180 por litro** de etanol, enquanto a receita estimada (preço CEPEA/Esalq) fica entre **R$ 7,92 e R$ 19,02** por litro — uma distância muito grande, mesmo no cenário mais otimista. Mas o modelo tem lacunas importantes: usa preço de varejo (não industrial) para lactase/fermento, o que provavelmente **superestima** o custo real, e não inclui CAPEX, mão de obra nem retificação. Os dados sustentam que o processo está **muito distante do equilíbrio econômico nas condições testadas**, mas não sustentam uma conclusão definitiva de viabilidade ou inviabilidade industrial."
+  },
+  {
+    "id": "o_que_e_projeto",
+    "keywords": [
+      "o que e esse projeto", "o que é esse projeto", "do que se trata o projeto",
+      "do que se trata a pesquisa", "qual o objetivo do projeto", "sobre o que e a pesquisa",
+      "sobre o que é a pesquisa", "me explica o projeto", "do que se trata esse trabalho"
+    ],
+    "answer": "O projeto investiga a produção de **bioetanol a partir do soro de leite**, um resíduo agroindustrial do processamento de queijo, normalmente descartado. O processo testado no Laboratório G-Óleo (UFLA) segue estas etapas: desproteinização do soro → hidrólise da lactose com a enzima lactase → fermentação com *Saccharomyces cerevisiae* → destilação fracionada. A pesquisa mede o que de fato foi obtido, calcula projeções de escala e faz uma análise econômica preliminar — sempre deixando claro o que é dado medido, calculado, de fontes externas ou premissa assumida."
+  },
+  {
+    "id": "onde_foi_feito",
+    "keywords": [
+      "onde foi feito o experimento", "quem fez essa pesquisa", "quem realizou o experimento",
+      "qual laboratorio", "qual laboratório", "qual universidade", "onde foi realizado"
+    ],
+    "answer": "O experimento foi realizado no **Laboratório G-Óleo, da UFLA (Universidade Federal de Lavras)**, em Lavras-MG, e é apresentado na feira de ciências do **Colégio IMP**."
+  },
+  {
+    "id": "processo_etapas",
+    "keywords": [
+      "como funciona o processo", "quais as etapas do processo", "como e feito o processo",
+      "como é feito o processo", "passo a passo do processo", "quais sao as etapas",
+      "quais são as etapas"
+    ],
+    "answer": "O processo tem 4 etapas principais: 1) **Desproteinização** do soro de leite cru (aquecimento a 90-100°C, remoção de proteínas); 2) **Hidrólise enzimática** da lactose com a enzima lactase (37-40°C), quebrando a lactose em glicose e galactose; 3) **Fermentação** do mosto resultante com *Saccharomyces cerevisiae* (30°C, 72h); 4) **Destilação fracionada** (coleta a ≈78°C, temperatura de ebulição do etanol). No experimento: 250 mL de soro cru → 160 mL de filtrado → 160 mL de mosto fermentado → 15 mL de destilado."
+  },
+  {
+    "id": "por_que_soro",
+    "keywords": [
+      "por que soro de leite", "por que usar soro", "qual a motivacao do projeto",
+      "qual a motivação do projeto", "qual o motivo do projeto", "por que escolheram soro de leite"
+    ],
+    "answer": "O soro de leite é um resíduo agroindustrial gerado em grande volume pela produção de queijo, e seu descarte inadequado é um problema ambiental (alta carga orgânica). Ele contém lactose, um açúcar fermentável — daí a ideia de transformar esse resíduo em um produto de valor (etanol), em vez de simplesmente descartá-lo."
+  },
+  {
+    "id": "comparacao_literatura",
+    "keywords": [
+      "compare com outras universidades", "compare com outras pesquisas",
+      "comparado com a literatura", "rendimento comparado a literatura",
+      "como se compara com outros estudos", "outras universidades pesquisaram isso"
+    ],
+    "answer": "A maior parte da literatura sobre etanol de soro de leite usa a levedura *Kluyveromyces marxianus/lactis*, que fermenta a lactose **diretamente**, sem precisar de hidrólise — uma rota biológica diferente da usada neste projeto (lactase + *Saccharomyces cerevisiae*). Essa literatura reporta eficiências de fermentação de 80–97% do rendimento teórico (estudos internacionais indexados no PMC), mas serve como **teto técnico de comparação**, não como validação direta da nossa rota. A referência mais próxima (O'Leary et al. 1977, USDA) só foi acessada em resumo, e aponta que *S. cerevisiae* pode fermentar mal a galactose liberada pela hidrólise — um limite biológico não verificado no nosso experimento."
+  },
+  {
+    "id": "custo_experimento",
+    "keywords": [
+      "quanto custou o experimento", "custo dos reagentes", "quanto foi gasto no experimento",
+      "custo do experimento", "quanto gastaram no experimento"
+    ],
+    "answer": "No experimento em si, foram gastos **R$ 45** em reagentes efetivamente usados (R$ 40 de lactase + R$ 5 de fermento biológico, preço de varejo/farmácia) — Medido, do relatório do projeto. O custo do soro de leite e dos equipamentos de laboratório não foi contabilizado (obtidos sem custo registrado / cedidos pelo Laboratório G-Óleo). Isso é diferente do custo de produção em escala industrial, que é uma projeção **calculada**, não uma medição direta."
+  },
+  {
+    "id": "limitacoes",
+    "keywords": [
+      "quais as limitacoes", "quais as limitações", "quais os problemas do estudo",
+      "quais as lacunas", "o que falta no estudo", "quais as fraquezas do projeto"
+    ],
+    "answer": "As principais limitações conhecidas: 1) o teor alcoólico do destilado nunca foi medido (maior lacuna); 2) não há preço industrial real de lactase/levedura, só preço de varejo; 3) a literatura de comparação usa uma rota biológica diferente da nossa; 4) foi uma **execução única, sem réplicas nem ensaio controle**; 5) o modelo econômico não inclui CAPEX, mão de obra nem retificação. Por isso, o projeto evita conclusões definitivas de viabilidade/inviabilidade ou de reprodutibilidade."
+  },
+  {
+    "id": "escala_industrial",
+    "keywords": [
+      "usar na industria", "usar na indústria", "escala industrial", "produzir em grande escala",
+      "aplicacao industrial", "aplicação industrial", "da pra escalar", "dá pra escalar"
+    ],
+    "answer": "Em escala, mantendo as mesmas eficiências observadas no experimento, a produção escalaria linearmente com o volume de soro processado — mas isso é uma **extrapolação simples**, não uma previsão real de desempenho industrial. Os dados não sustentam uma afirmação definitiva de viabilidade ou inviabilidade em escala industrial: falta o preço real de insumo em grande escala e não se sabe se a concentração de etanol pode ser aumentada com otimização do processo."
+  },
+  {
+    "id": "quem_e_voce",
+    "keywords": [
+      "quem e voce", "quem é você", "o que e voce", "o que é você",
+      "voce e uma ia", "você é uma ia", "qual ia voce e", "qual ia você é", "qual modelo voce e"
+    ],
+    "answer": "Sou a **SoroIA**, a inteligência artificial especialista deste projeto de pesquisa. Rodo localmente neste notebook (via Ollama, sem internet e sem custo), e minhas respostas são baseadas exclusivamente nos dados reais do projeto — nunca invento números."
+  },
+  {
+    "id": "lactase_o_que_e",
+    "keywords": [
+      "o que e lactase", "o que é lactase", "para que serve a lactase", "pra que serve a lactase",
+      "o que faz a lactase"
+    ],
+    "answer": "Lactase é a enzima que quebra a **lactose** (o açúcar do leite) em dois açúcares mais simples, glicose e galactose. Ela é necessária neste projeto porque a levedura usada na fermentação (*Saccharomyces cerevisiae*) não consegue fermentar a lactose diretamente — só depois de quebrada em glicose é que a fermentação alcoólica ocorre bem."
+  },
+  {
+    "id": "diferenca_cana_milho",
+    "keywords": [
+      "etanol de cana", "etanol de milho", "diferenca para cana", "diferença para cana",
+      "comparado a cana de acucar", "comparado à cana-de-açúcar"
+    ],
+    "answer": "A diferença principal é a matéria-prima: cana-de-açúcar e milho são cultivos agrícolas dedicados à produção de etanol, com cadeias produtivas maduras e em grande escala; o soro de leite é um **resíduo agroindustrial** (subproduto da produção de queijo, normalmente descartado), e a rota aqui usada (hidrólise enzimática + fermentação) é bem menos estudada e testada em escala. Este projeto não faz uma comparação quantitativa direta de custo/rendimento com etanol de cana ou milho — os dados disponíveis não permitem essa comparação com rigor."
+  },
+  {
+    "id": "quantas_repeticoes",
+    "keywords": [
+      "quantas repeticoes", "quantas repetições", "quantas amostras", "foi repetido o experimento",
+      "teve replicas", "teve réplicas", "quantas vezes foi feito o experimento"
+    ],
+    "answer": "Foi uma **execução única**, sem réplicas e sem ensaio controle (por exemplo, um mosto sem lactase, para comparação). Isso é uma limitação explícita do projeto: não permite afirmar nada sobre a reprodutibilidade do resultado. Repetir o experimento com réplicas é um dos próximos passos indicados como prioritário."
+  }
+]

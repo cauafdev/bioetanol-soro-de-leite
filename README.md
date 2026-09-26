@@ -2,12 +2,19 @@
 
 Feira de Ciências — Colégio IMP / Laboratório G-Óleo (UFLA), Lavras-MG, 2026.
 
-Esta pasta contém duas fases do mesmo projeto:
+Esta pasta contém quatro fases do mesmo projeto:
 
 - **Fase 1 — pesquisa** (`notebooks/`): a modelagem técnica e econômica completa em Jupyter.
-- **Fase 2 — site** (`app/`): uma aplicação Streamlit visual e interativa para apresentar o projeto na
-  feira — home, experimento (com fotos reais), resultados (gráficos interativos), simulador ao vivo e
-  metodologia/fontes. O site **reutiliza `src/models.py` sem duplicar nenhuma fórmula**.
+- **Fase 2 — site Streamlit** (`app/`): uma aplicação Streamlit visual e interativa para apresentar o
+  projeto na feira — home, experimento (com fotos reais), resultados (gráficos interativos), simulador
+  ao vivo e metodologia/fontes. Reutiliza `src/models.py` sem duplicar nenhuma fórmula.
+- **Fase 3 — chat com IA local** (`webapp/`): um site com chat de IA (Ollama, 100% local/offline, sem
+  custo) que responde perguntas de visitantes com base na base de conhecimento gerada a partir de
+  `data/` e `src/models.py`. Ver `webapp/README.md`.
+- **Fase 4 — site interativo final** (`site/`): o site usado na apresentação da feira — visão geral,
+  simulador com gráficos ao vivo, molécula 3D de etanol (Three.js, dados reais do PubChem), mapa do
+  Brasil por produção de leite (Embrapa/IBGE) e um chatbot embutido (SoroBot/Botpress). 100% estático,
+  sem dependência de servidor Python além de um serviço de arquivos simples — ver `site/server.py`.
 
 ## Como rodar
 
@@ -34,6 +41,19 @@ streamlit run app/Home.py
 
 Abre em `http://localhost:8501`. Para exibir na feira, deixe em tela cheia no navegador (F11).
 
+**Site final da feira (Fase 4), rodar a partir de `site/`:**
+
+```bash
+cd site
+python server.py
+```
+
+Abre em `http://localhost:8000`. Site estático (sem IA, sem chave de API) — só a aba "SoroBot" carrega
+um chatbot externo (Botpress) e precisa de internet; o resto funciona 100% offline.
+
+**Chat com IA local (Fase 3), rodar a partir de `webapp/`:** ver `webapp/README.md` (requer Ollama
+instalado).
+
 ## Estrutura
 
 ```
@@ -57,6 +77,8 @@ app/
   utils/data.py                   - ponte entre o site e src/models.py + gráficos Plotly
 assets/photos/                    - fotos reais do experimento (extraídas do relatório .docx)
 reports/figures/                  - gráficos estáticos exportados pelos notebooks (PNG)
+webapp/                           - Fase 3: chat com IA local (Ollama), ver webapp/README.md
+site/                             - Fase 4: site final da feira (estático + simulador + mapa + molécula 3D)
 ```
 
 ## Princípio seguido em toda a pesquisa

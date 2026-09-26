@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>soro.valor — Bioetanol do soro de leite</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-shell">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark">~~</div>
+      <div>
+        <div class="brand-name">soro<span class="accent">.valor</span></div>
+        <div class="brand-sub">PESQUISA APLICADA</div>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <button class="nav-item is-active" data-tab="visao">
+        <svg viewBox="0 0 24 24" class="nav-icon"><path d="M3 12h4l3 8 4-16 3 8h4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Visão geral
+      </button>
+      <button class="nav-item" data-tab="simulador">
+        <svg viewBox="0 0 24 24" class="nav-icon"><path d="M4 21V9m8 12V3m8 18v-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="4" cy="7" r="2" fill="currentColor"/><circle cx="12" cy="15" r="2" fill="currentColor"/><circle cx="20" cy="13" r="2" fill="currentColor"/></svg>
+        Simulador
+      </button>
+      <button class="nav-item" data-tab="resultados">
+        <svg viewBox="0 0 24 24" class="nav-icon"><path d="M4 4v16h16M8 16l3-5 3 3 4-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Resultados
+      </button>
+      <button class="nav-item" data-tab="metodologia">
+        <svg viewBox="0 0 24 24" class="nav-icon"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V4H6.5A2.5 2.5 0 0 0 4 6.5v13z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M4 19.5A2.5 2.5 0 0 1 6.5 22H20" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+        Metodologia
+      </button>
+      <button class="nav-item" data-tab="referencias">
+        <svg viewBox="0 0 24 24" class="nav-icon"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        Referências
+      </button>
+      <button class="nav-item" data-tab="mapa">
+        <svg viewBox="0 0 24 24" class="nav-icon"><path d="M9 4l-6 2.5v13.5l6-2.5 6 2.5 6-2.5V4l-6 2.5-6-2.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9 4v13.5M15 6.5V20" stroke="currentColor" stroke-width="2"/></svg>
+        Mapa do Brasil
+      </button>
+      <button class="nav-item" data-tab="chat">
+        <svg viewBox="0 0 24 24" class="nav-icon"><path d="M4 4h16v12H8l-4 4V4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="9" cy="10" r="1" fill="currentColor"/><circle cx="12" cy="10" r="1" fill="currentColor"/><circle cx="15" cy="10" r="1" fill="currentColor"/></svg>
+        SoroBot (IA)
+      </button>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="footer-kicker">CADERNO DE PESQUISA</div>
+      <p>Modelo exploratório e reprodutível.<br>Sem inteligência artificial.</p>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <header class="topbar">
+      <div class="breadcrumb"><span>Pesquisa</span><span class="sep">›</span><span class="current">Bioetanol do soro de leite</span></div>
+      <div class="badge"><span class="dot"></span>Modelo científico · v1.0</div>
+    </header>
+
+    <!-- ===================== VISÃO GERAL ===================== -->
+    <section class="tab-panel is-active" id="tab-visao">
+
+      <div class="hero">
+        <div class="hero-text">
+          <div class="hero-kicker">🧪 PESQUISA &amp; SIMULAÇÃO</div>
+          <h1>Do soro descartado ao<br><span class="accent-text">bioetanol.</span></h1>
+          <p class="hero-sub">Qual é o potencial real de conversão — e quando ele faz sentido economicamente?
+            Explore as hipóteses, os limites e os resultados de um experimento real, do
+            Laboratório G-Óleo (UFLA) ao modelo de escala.</p>
+          <div class="hero-note"><span class="note-bar"></span>Uma análise transparente, do laboratório aos números.</div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <svg viewBox="0 0 200 200" class="flask-svg">
+            <path d="M80 20h40v40l35 70a15 15 0 0 1-13 22H58a15 15 0 0 1-13-22l35-70z" fill="rgba(255,255,255,0.10)" stroke="rgba(255,255,255,0.35)" stroke-width="2"/>
+            <path d="M64 96h72" stroke="rgba(255,255,255,0.35)" stroke-width="2"/>
+            <path d="M70 100l-9 18a15 15 0 0 0 13 22h56a15 15 0 0 0 13-22l-9-18z" fill="rgba(255,255,255,0.18)"/>
+            <circle cx="150" cy="40" r="16" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.25)" stroke-width="2"/>
+            <circle cx="150" cy="40" r="7" fill="rgba(255,255,255,0.25)"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="section-head">
+        <div>
+          <div class="kicker">A CIÊNCIA POR TRÁS</div>
+          <h2>A molécula que estamos produzindo</h2>
+          <p class="section-sub">Etanol (C₂H₅OH) — estrutura 3D real (PubChem/NIH). Arraste para girar, use o scroll para dar zoom.</p>
+        </div>
+      </div>
+
+      <div class="card how-it-works">
+        <div class="molecule-stage" id="molecule-stage"><!-- preenchido via JS (Three.js) --></div>
+        <div class="molecule-caption">
+          <span class="molecule-legend"><span class="molecule-dot" style="background:#e0342c"></span>Oxigênio</span>
+          <span class="molecule-legend"><span class="molecule-dot" style="background:#4a4a4a"></span>Carbono</span>
+          <span class="molecule-legend"><span class="molecule-dot" style="background:#f2f2f2;border:1px solid #ccc;"></span>Hidrogênio</span>
+          <span class="molecule-hint">— coloração CPK padrão</span>
+        </div>
+
+        <div class="process-steps" style="margin-top:1.6rem;">
+          <div class="process-step"><div class="step-n">1</div><div><div class="step-title">Desproteinização</div><div class="step-sub">Soro cru aquecido (90–100°C) e filtrado, restando um líquido rico em lactose.</div></div></div>
+          <div class="process-step"><div class="step-n">2</div><div><div class="step-title">Hidrólise enzimática</div><div class="step-sub">A enzima <strong>lactase</strong> quebra a lactose em glicose + galactose.</div></div></div>
+          <div class="process-step"><div class="step-n">3</div><div><div class="step-title">Fermentação</div><div class="step-sub">A levedura <em>S. cerevisiae</em> consome a glicose e produz <strong>etanol</strong> + CO₂ (72h, 30°C).</div></div></div>
+          <div class="process-step"><div class="step-n">4</div><div><div class="step-title">Destilação fracionada</div><div class="step-sub">Aquecimento a ≈78°C separa o etanol do restante da mistura.</div></div></div>
+        </div>
+      </div>
+
+      <div class="section-head" style="margin-top:2.2rem;">
+        <div>
+          <div class="kicker">A TRANSFORMAÇÃO, EM NÚMEROS</div>
+          <h2>De resíduo a combustível</h2>
+        </div>
+      </div>
+      <div class="card flow-strip" id="flow-strip"><!-- preenchido via JS --></div>
+
+      <div class="section-head" style="margin-top: 2.4rem;">
+        <div>
+          <div class="kicker">O QUE FUNCIONOU</div>
+          <h2>Evidências de que o processo produz etanol</h2>
+        </div>
+      </div>
+      <div class="evidence-grid">
+        <div class="evidence-card">
+          <div class="evidence-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a2 2 0 0 1 2 2v9.5a4 4 0 1 1-4 0V5a2 2 0 0 1 2-2z"/><path d="M10 15h4"/><circle cx="12" cy="18" r="0.6" fill="currentColor"/></svg></div>
+          <div class="evidence-title">Temperatura de coleta ≈ 78°C</div>
+          <div class="evidence-sub">Ponto de ebulição do etanol — coerente com destilação fracionada bem-sucedida. <span class="tag tag-medido">Medido</span></div>
+        </div>
+        <div class="evidence-card">
+          <div class="evidence-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c1.5 3 4.5 5 4.5 9a4.5 4.5 0 1 1-9 0c0-1.6.9-2.7 1.8-3.8.5 1 1.2 1.3 1.7.8-.4-2 .3-3.7 1-6z"/></svg></div>
+          <div class="evidence-title">Teste de chama positivo</div>
+          <div class="evidence-sub">Combustão sem coloração visível na chama. <span class="tag tag-medido">Medido</span> (qualitativo)</div>
+        </div>
+        <div class="evidence-card">
+          <div class="evidence-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2h4"/><path d="M11 2v6.5L5.5 18a2 2 0 0 0 1.7 3h9.6a2 2 0 0 0 1.7-3L13 8.5V2"/><path d="M8 15h8"/></svg></div>
+          <div class="evidence-title">Rota química funcional</div>
+          <div class="evidence-sub">Desproteinização → hidrólise → fermentação → destilação: cada etapa observada e registrada.</div>
+        </div>
+      </div>
+
+      <div class="explore-cta">
+        <div class="explore-cta-text">
+          <h3>Quer ir além da química?</h3>
+          <p>Teste os cenários, mexa no volume e veja se a conta fecha — ou explore a conclusão completa da pesquisa.</p>
+        </div>
+        <div class="explore-cta-buttons">
+          <button class="btn-primary" data-goto="simulador">Abrir o Simulador →</button>
+          <button class="btn-ghost" data-goto="resultados">Ver Resultados</button>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ===================== SIMULADOR ===================== -->
+    <section class="tab-panel" id="tab-simulador">
+
+      <div class="section-head">
+        <div>
+          <div class="kicker">LABORATÓRIO INTERATIVO</div>
+          <h2>Teste as suas hipóteses</h2>
+          <p class="section-sub">Ajuste as variáveis e acompanhe a resposta do modelo em tempo real — cálculo local, mesma fórmula do notebook de pesquisa.</p>
+        </div>
+        <button class="btn-ghost" id="btn-restore">↻ Restaurar</button>
+      </div>
+
+      <div class="sim-grid">
+
+        <div class="card sim-params">
+          <div class="card-title">Parâmetros do cenário</div>
+          <div class="card-sub">Valores técnicos vêm do experimento; o teor alcoólico é uma <span class="tag tag-premissa">premissa de projeto</span> (nunca medido).</div>
+
+          <label class="field">
+            <span class="field-label">Volume de soro processado</span>
+            <input type="range" id="slider-volume" min="1" max="6" step="0.01" value="3">
+            <span class="field-value" id="volume-readout">1.000 L</span>
+          </label>
+
+          <div class="field">
+            <span class="field-label">Cenário técnico (teor alcoólico do destilado)</span>
+            <div class="scenario-toggle" id="scenario-toggle">
+              <button class="scenario-btn" data-scenario="conservador">Conservador<small>5%</small></button>
+              <button class="scenario-btn is-active" data-scenario="experimental">Experimental<small>8,5%</small></button>
+              <button class="scenario-btn" data-scenario="otimista">Otimista<small>12%</small></button>
+            </div>
+          </div>
+
+          <label class="field">
+            <span class="field-label">Ajuste fino do teor alcoólico <span class="tag tag-premissa">premissa</span></span>
+            <input type="range" id="slider-teor" min="5" max="12" step="0.1" value="8.5">
+            <span class="field-value" id="teor-readout">8,5% v/v</span>
+          </label>
+
+          <div class="sim-result-mini" id="sim-mini"><!-- preenchido via JS --></div>
+        </div>
+
+        <div class="card sim-chart">
+          <div class="card-title-row">
+            <div>
+              <div class="card-title">Curva de potencial</div>
+              <div class="card-sub">Como o resultado evolui com o volume de soro</div>
+            </div>
+            <div class="view-toggle" id="view-toggle">
+              <button class="view-btn is-active" data-view="producao">Produção</button>
+              <button class="view-btn" data-view="economia">Economia</button>
+            </div>
+          </div>
+          <div class="chart-wrap">
+            <canvas id="sim-chart-canvas"></canvas>
+          </div>
+          <div class="chart-legend-note" id="chart-note"></div>
+        </div>
+
+      </div>
+
+      <div class="card sim-balance">
+        <div class="card-title">Balanço do processo (no volume selecionado)</div>
+        <div class="balance-flow" id="balance-flow"><!-- preenchido via JS --></div>
+      </div>
+
+    </section>
+
+    <!-- ===================== RESULTADOS ===================== -->
+    <section class="tab-panel" id="tab-resultados">
+      <div class="section-head">
+        <div>
+          <div class="kicker">CONCLUSÃO DA PESQUISA</div>
+          <h2>O que os dados sustentam — e o que não sustentam</h2>
+        </div>
+      </div>
+
+      <div class="result-columns">
+        <div class="card result-card result-good">
+          <div class="result-card-head"><span class="tag tag-good">Sustentado pelos dados</span></div>
+          <ul>
+            <li>A rota química (desproteinização → hidrólise enzimática → fermentação → destilação fracionada) <strong>funciona</strong>: produz um destilado inflamável a partir de um resíduo agroindustrial, com três evidências convergentes (temperatura de coleta ≈78°C, combustão positiva, ausência de coloração).</li>
+            <li>Em escala, mantendo as mesmas eficiências de processo, a produção de etanol <strong>escala linearmente</strong> com o volume de soro — mas isso é uma extrapolação simples, não uma previsão de desempenho industrial real.</li>
+            <li>Nas condições de preço testadas, o processo está <strong>muito distante do equilíbrio econômico</strong>, e essa distância se mantém mesmo sob a incerteza mais favorável de insumo, porque o próprio custo de energia (calculado, não estimado de mercado) já supera a receita.</li>
+          </ul>
+        </div>
+        <div class="card result-card result-bad">
+          <div class="result-card-head"><span class="tag tag-critical">Não sustentado pelos dados</span></div>
+          <ul>
+            <li>Uma afirmação <strong>definitiva de viabilidade ou inviabilidade</strong> econômica industrial — falta o preço real de insumo em escala e falta saber se a concentração de etanol pode ser aumentada com otimização de processo.</li>
+            <li>Uma <strong>comparação direta e rigorosa</strong> com a literatura de fermentação de soro de leite — a rota biológica usada aqui é diferente da mais estudada (lactase + <em>S. cerevisiae</em>, não <em>Kluyveromyces</em>).</li>
+            <li>Qualquer <strong>estimativa de retorno sobre investimento</strong> — não há dado de CAPEX no modelo.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section-head" style="margin-top:2.2rem;">
+        <div><div class="kicker">PRÓXIMOS PASSOS</div><h2>O que mais mudaria a qualidade da análise</h2></div>
+      </div>
+      <ol class="steps-list">
+        <li><strong>Medir a densidade/teor alcoólico do destilado</strong> — maior incerteza do modelo técnico atual.</li>
+        <li><strong>Buscar preço industrial real</strong> de lactase e levedura a granel (hoje só há preço de varejo).</li>
+        <li><strong>Testar formas de aumentar a concentração final de etanol</strong> — a alavanca mais promissora indicada pela análise de sensibilidade, mais do que negociar preço de insumo.</li>
+        <li><strong>Repetir o experimento com réplicas</strong> e um ensaio controle sem lactase.</li>
+      </ol>
+    </section>
+
+    <!-- ===================== METODOLOGIA ===================== -->
+    <section class="tab-panel" id="tab-metodologia">
+      <div class="section-head">
+        <div>
+          <div class="kicker">COMO FOI FEITO</div>
+          <h2>Metodologia e proveniência dos dados</h2>
+          <p class="section-sub">Todo número neste site carrega um selo de origem — nunca apresentamos uma premissa como se fosse um dado medido.</p>
+        </div>
+      </div>
+
+      <div class="tag-legend">
+        <span class="tag tag-medido">Medido</span><span class="tag-legend-text">experimento no Laboratório G-Óleo</span>
+        <span class="tag tag-calculado">Calculado</span><span class="tag-legend-text">estequiometria / física básica</span>
+        <span class="tag tag-externo">Externo</span><span class="tag-legend-text">literatura / instituição citada</span>
+        <span class="tag tag-premissa">Premissa</span><span class="tag-legend-text">hipótese de projeto, não medida</span>
+      </div>
+
+      <div class="section-head" style="margin-top:2rem;"><div><h3>Etapas do processo</h3></div></div>
+      <div class="process-steps">
+        <div class="process-step"><div class="step-n">1</div><div><div class="step-title">Desproteinização</div><div class="step-sub">90–100°C, 15–30 min, filtração a vácuo (Büchner)<br>250 mL soro cru → 160 mL filtrado <span class="tag tag-medido">Medido</span></div></div></div>
+        <div class="process-step"><div class="step-n">2</div><div><div class="step-title">Hidrólise enzimática</div><div class="step-sub">Lactase, 37–40°C — quebra lactose em glicose + galactose <span class="tag tag-medido">Medido</span></div></div></div>
+        <div class="process-step"><div class="step-n">3</div><div><div class="step-title">Fermentação</div><div class="step-sub"><em>Saccharomyces cerevisiae</em>, 30°C, 72h<br>160 mL mosto fermentado <span class="tag tag-medido">Medido</span></div></div></div>
+        <div class="process-step"><div class="step-n">4</div><div><div class="step-title">Destilação fracionada</div><div class="step-sub">Coleta a 78°C → 15 mL destilado <span class="tag tag-medido">Medido</span></div></div></div>
+      </div>
+
+      <div class="section-head" style="margin-top:2.2rem;"><div><h3>Parâmetros centrais do modelo</h3></div></div>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead><tr><th>Parâmetro</th><th>Valor</th><th>Tipo</th><th>Origem</th></tr></thead>
+          <tbody>
+            <tr><td>Recuperação na filtração</td><td>64%</td><td><span class="tag tag-medido">Medido</span></td><td>Experimento (250→160 mL)</td></tr>
+            <tr><td>Razão destilado/mosto</td><td>9,4%</td><td><span class="tag tag-medido">Medido</span></td><td>Experimento (15→160 mL)</td></tr>
+            <tr><td>Teor alcoólico do destilado</td><td>5–12% v/v</td><td><span class="tag tag-premissa">Premissa</span></td><td>Relatório seção 4.6 (não medido)</td></tr>
+            <tr><td>Concentração de lactose no soro</td><td>~49 g/L</td><td><span class="tag tag-externo">Externo</span></td><td>EPAMIG/ILCT (proxy, não é medição do soro usado)</td></tr>
+            <tr><td>Rendimento teórico estequiométrico</td><td>0,538 g/g</td><td><span class="tag tag-calculado">Calculado</span></td><td>Gay-Lussac estendido (lactose → 4 etanol)</td></tr>
+            <tr><td>Eficiência industrial de fermentação (literatura)</td><td>80–97%</td><td><span class="tag tag-externo">Externo</span></td><td><em>Kluyveromyces spp.</em> — rota biológica diferente</td></tr>
+            <tr><td>Preço do etanol hidratado</td><td>R$ 2,6412/L</td><td><span class="tag tag-externo">Externo</span></td><td>CEPEA/Esalq, set/2026</td></tr>
+            <tr><td>Tarifa de energia industrial</td><td>R$ 0,48077/kWh</td><td><span class="tag tag-externo">Externo</span></td><td>CEMIG Grupo A4, fora-ponta</td></tr>
+            <tr><td>Preço de lactase (insumo)</td><td>R$ 9,99/g (varejo)</td><td><span class="tag tag-medido">Medido</span></td><td>Compra em farmácia — <strong>não é preço industrial</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="section-head" style="margin-top:2.2rem;"><div><h3>Lacunas críticas conhecidas</h3></div></div>
+      <ol class="steps-list">
+        <li><strong>Teor alcoólico / densidade do destilado nunca foram medidos.</strong> Usa-se a faixa que o próprio projeto já esperava (5–12% v/v, relatório seção 4.6) como premissa — é a lacuna mais impactante de todo o modelo.</li>
+        <li><strong>Preço industrial de lactase e levedura não encontrado em fonte institucional.</strong> Só há preço de varejo/farmácia, o que tende a <strong>superestimar</strong> o custo real. Cotações comerciais de lactase a granel (US$240–420/kg) sugerem que o custo real seja bem menor.</li>
+        <li><strong>Literatura de comparação usa rota biológica diferente</strong> (<em>Kluyveromyces</em> fermenta lactose direto; este projeto usa lactase + <em>S. cerevisiae</em>). Os valores da literatura servem como teto técnico, não validação direta.</li>
+        <li><strong>Execução única, sem réplicas, sem ensaio controle</strong> — limita qualquer afirmação sobre reprodutibilidade.</li>
+        <li><strong>O modelo econômico não inclui CAPEX, custo do soro, mão de obra nem retificação</strong> — é um modelo de custo variável apenas.</li>
+      </ol>
+    </section>
+
+    <!-- ===================== REFERÊNCIAS ===================== -->
+    <section class="tab-panel" id="tab-referencias">
+      <div class="section-head">
+        <div>
+          <div class="kicker">FONTES CONSULTADAS</div>
+          <h2>Referências externas</h2>
+          <p class="section-sub">Cada fonte usada no modelo carrega um nível de confiabilidade e uma ressalva explícita — nada foi citado sem checar o que ela de fato sustenta.</p>
+        </div>
+      </div>
+      <div id="references-list"><!-- preenchido via JS --></div>
+    </section>
+
+    <!-- ===================== MAPA DO BRASIL ===================== -->
+    <section class="tab-panel" id="tab-mapa">
+      <div class="section-head">
+        <div>
+          <div class="kicker">POTENCIAL NACIONAL</div>
+          <h2>Onde o soro de leite se concentra no Brasil</h2>
+          <p class="section-sub">Passe o mouse sobre um estado para ver a produção de leite real (Embrapa/IBGE, 2019) e o potencial teórico de bioetanol, calculado com o mesmo modelo do Simulador — um teto comparativo entre estados, não uma medição de descarte.</p>
+        </div>
+      </div>
+
+      <div class="map-grid">
+        <div class="card map-card">
+          <div id="map-svg-container" class="map-svg-container">Carregando mapa…</div>
+          <div class="map-legend">
+            <span>Produção de leite (2019)</span>
+            <div class="map-legend-ramp"></div>
+            <span class="map-legend-labels"><span>menor</span><span>maior</span></span>
+          </div>
+        </div>
+
+        <div class="card map-detail" id="map-detail">
+          <div class="map-detail-placeholder">
+            <div style="font-size:2rem;">🗺️</div>
+            <p>Passe o mouse sobre um estado (ou toque, no celular) para ver os números.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-head" style="margin-top:2rem;">
+        <div><h3>Ranking dos 10 maiores produtores</h3></div>
+      </div>
+      <div class="table-wrap">
+        <table class="data-table" id="map-ranking-table"><!-- preenchido via JS --></table>
+      </div>
+    </section>
+
+    <!-- ===================== CHAT IA (SOROBOT) ===================== -->
+    <section class="tab-panel" id="tab-chat">
+      <div class="section-head">
+        <div>
+          <div class="kicker">TIRE SUAS DÚVIDAS</div>
+          <h2>Converse com o SoroBot</h2>
+          <p class="section-sub">Um assistente de IA treinado com os dados deste projeto, para responder perguntas dos visitantes da feira.</p>
+        </div>
+      </div>
+
+      <div class="card chat-embed-card">
+        <iframe
+          src="https://cdn.botpress.cloud/webchat/v3.7/shareable.html?configUrl=https://files.bpcontent.cloud/2025/05/07/02/20250507022050-ZIMUG6A9.json"
+          class="chat-embed-frame"
+          title="SoroBot – IA do projeto Bioetanol do Soro do Leite"
+          allow="microphone">
+        </iframe>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script src="vendor/chart.umd.min.js"></script>
+<script src="vendor/three.min.js"></script>
+<script src="vendor/OrbitControls.js"></script>
+<script src="data.js"></script>
+<script src="molecule-data.js"></script>
+<script src="molecule.js"></script>
+<script src="app.js"></script>
+<script src="map-data.js"></script>
+<script src="map.js"></script>
+</body>
+</html>

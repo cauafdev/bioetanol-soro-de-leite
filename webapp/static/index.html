@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SoroIA — Bioetanol do Soro de Leite</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-brand">
+    <span class="topbar-mark">SoroIA</span>
+    <span class="topbar-sub">Projeto Bioetanol de Soro de Leite &middot; Colégio IMP / Lab. G-Óleo, UFLA</span>
+  </div>
+  <button class="topbar-reset" id="reset-btn" title="Nova conversa">Nova conversa</button>
+</header>
+
+<main id="app">
+
+  <section id="hero" class="hero">
+    <div class="hero-kicker">Assistente de pesquisa &middot; feira de ciências</div>
+    <h1 class="hero-title">Olá, visitante! 👋</h1>
+    <p class="hero-subtitle">
+      Sou a <strong>SoroIA</strong>, a inteligência artificial deste projeto — treinada com todos
+      os dados do experimento, a pesquisa de outras universidades e o modelo técnico-econômico
+      completo. Pergunte qualquer coisa sobre a produção de bioetanol a partir do soro de leite.
+    </p>
+
+    <form id="composer-hero" class="composer">
+      <textarea id="input-hero" class="composer-input" rows="1"
+        placeholder="Pergunte qualquer coisa sobre o projeto..." autofocus></textarea>
+      <button type="submit" class="composer-send" aria-label="Enviar">➤</button>
+    </form>
+
+    <div class="chip-row" id="chip-row">
+      <button class="chip" data-q="Quanto de etanol foi produzido no experimento?">Quanto de etanol foi produzido?</button>
+      <button class="chip" data-q="O processo é economicamente viável hoje? Por quê?">É economicamente viável?</button>
+      <button class="chip" data-q="Compare esta pesquisa com estudos de outras universidades sobre etanol de soro de leite.">Compare com outras pesquisas</button>
+      <button class="chip" data-q="Gere um gráfico comparando a produção de etanol nos três cenários (conservador, experimental, otimista) em diferentes escalas.">Gráfico dos cenários de produção</button>
+      <button class="chip" data-q="Redija um texto avaliando a viabilidade do uso dessa energia, citando as principais limitações do estudo.">Redija sobre viabilidade energética</button>
+      <button class="chip" data-q="Quais são as maiores lacunas e limitações desta pesquisa?">Limitações da pesquisa</button>
+    </div>
+
+    <div class="provenance-note">
+      Todo número citado é rotulado como <b>Medido</b>, <b>Calculado</b>, <b>Externo</b> ou
+      <b>Premissa de projeto</b> — nunca uma suposição silenciosa.
+    </div>
+  </section>
+
+  <section id="chat" class="chat" hidden>
+    <div class="chat-scroll" id="chat-scroll"></div>
+  </section>
+
+</main>
+
+<form id="composer-dock" class="composer-dock" hidden>
+  <div class="composer">
+    <textarea id="input-dock" class="composer-input" rows="1"
+      placeholder="Pergunte qualquer coisa sobre o projeto..."></textarea>
+    <button type="submit" class="composer-send" aria-label="Enviar">➤</button>
+  </div>
+</form>
+
+<script src="vendor/marked.min.js"></script>
+<script src="vendor/chart.umd.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

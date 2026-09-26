@@ -1,0 +1,4 @@
+flask>=3.0
+ollama>=0.4
+python-dotenv>=1.0
+tabulate>=0.9
