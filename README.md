@@ -2,6 +2,9 @@
 
 Feira de Ciências — Colégio IMP / Laboratório G-Óleo (UFLA), Lavras-MG, 2026.
 
+> **Vai rodar o site em outro computador?** Siga o [`SETUP.md`](SETUP.md) — passo a passo do zero
+> (instalar Git/Python, clonar, rodar), sem precisar já conhecer o projeto.
+
 Esta pasta contém quatro fases do mesmo projeto:
 
 - **Fase 1 — pesquisa** (`notebooks/`): a modelagem técnica e econômica completa em Jupyter.
