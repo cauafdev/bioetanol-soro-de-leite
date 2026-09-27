@@ -317,6 +317,21 @@ function logRange(min, max, n) {
   return pts;
 }
 
+const CHECKPOINT_VOLUMES_L = [100, 1_000, 10_000, 100_000, 1_000_000];
+
+// Versao em tabela dos graficos Chart.js, para leitores de tela (canvas
+// nao expoe dados a tecnologia assistiva) — poucas linhas de referencia,
+// nao os 40 pontos interpolados usados so para desenhar a curva.
+function renderChartTable(headers, rows) {
+  const table = document.getElementById("chart-table-fallback");
+  if (!table) return;
+  const caption = table.querySelector("caption")?.outerHTML || "";
+  table.innerHTML =
+    caption +
+    `<thead><tr>${headers.map((h) => `<th>${h}</th>`).join("")}</tr></thead>` +
+    `<tbody>${rows.map((row) => `<tr>${row.map((cell) => `<td>${cell}</td>`).join("")}</tr>`).join("")}</tbody>`;
+}
+
 function renderChart() {
   const ctx = document.getElementById("sim-chart-canvas");
   const volumes = logRange(10, 1_000_000, 40);
@@ -359,7 +374,18 @@ function renderChart() {
       data: { datasets },
       options: chartOptions("Volume de soro (L)", "Bioetanol (L)"),
     });
-    note.textContent = "Linha tracejada = teto estequiométrico (100% de conversão). Ponto roxo = seleção atual.";
+    note.textContent = "Linha tracejada = teto estequiométrico (100% de conversão). Ponto roxo = seleção atual. Fonte: cálculo próprio (src/models.py), ver aba Metodologia.";
+    ctx.setAttribute("aria-label", "Gráfico de linha: produção de bioetanol, em litros, por volume de soro processado, em litros, em escala logarítmica de 10 a 1.000.000 L, para os cenários conservador, experimental e otimista. Versão em tabela logo abaixo.");
+    renderChartTable(
+      ["Volume de soro", "Conservador", "Experimental", "Otimista", "Limite teórico"],
+      CHECKPOINT_VOLUMES_L.map((v) => [
+        formatLitros(v),
+        formatLitros(calcBalance(v, SCENARIOS.conservador.teorAlcoolico).etanolPuroL, 2),
+        formatLitros(calcBalance(v, SCENARIOS.experimental.teorAlcoolico).etanolPuroL, 2),
+        formatLitros(calcBalance(v, SCENARIOS.otimista.teorAlcoolico).etanolPuroL, 2),
+        formatLitros(calcBalance(v, 1).etanolTeoricoL, 2),
+      ])
+    );
   } else {
     const custoData = volumes.map((v) => {
       const b = calcBalance(v, state.teorAlcoolico);
@@ -384,7 +410,16 @@ function renderChart() {
       data: { datasets },
       options: chartOptions("Volume de soro (L)", "R$", true),
     });
-    note.textContent = "Escala log-log — em todo o intervalo simulado, o custo (insumo a preço de varejo) supera a receita.";
+    note.textContent = "Escala log-log — em todo o intervalo simulado, o custo (insumo a preço de varejo) supera a receita. Fonte: cálculo próprio (src/models.py), ver aba Metodologia.";
+    ctx.setAttribute("aria-label", "Gráfico de linha: custo total (varejo) e receita estimada, em reais, por volume de soro processado, em litros, em escala logarítmica de 10 a 1.000.000 L. Versão em tabela logo abaixo.");
+    renderChartTable(
+      ["Volume de soro", "Custo total (varejo)", "Receita estimada"],
+      CHECKPOINT_VOLUMES_L.map((v) => {
+        const b = calcBalance(v, state.teorAlcoolico);
+        const econ = calcEconomics(b);
+        return [formatLitros(v), formatBRLFull(econ.custoTotal), formatBRLFull(econ.receita)];
+      })
+    );
   }
 }
 

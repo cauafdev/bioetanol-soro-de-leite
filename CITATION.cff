@@ -1,0 +1,38 @@
+cff-version: 1.2.0
+message: "Se você usar este projeto, dados ou código, por favor cite-o como abaixo."
+type: software
+title: "Produção de bioetanol a partir do soro de leite: aproveitamento energético de um resíduo da indústria de laticínios"
+abstract: >-
+  Projeto de iniciação científica do Ensino Médio que investiga a produção de bioetanol a
+  partir do soro de leite (resíduo da indústria de laticínios) via hidrólise enzimática da
+  lactose seguida de fermentação alcoólica e destilação fracionada, com modelagem técnica e
+  econômica de escala em Python.
+authors:
+  - given-names: "Cauã Lara"
+    family-names: "Fernando"
+    affiliation: "Colégio IMP"
+  - given-names: "Giovanni"
+    family-names: "Marques Ferreira"
+    affiliation: "Colégio IMP"
+  - given-names: "Otávio"
+    family-names: "Zanquini de Souza"
+    affiliation: "Colégio IMP"
+  - given-names: "André Luiz"
+    family-names: "de Paiva Godinho"
+    affiliation: "Colégio IMP (professor orientador)"
+  - given-names: "Fernanda"
+    family-names: "Neves Miranda"
+    affiliation: "Universidade Federal de Lavras — UFLA, Engenharia de Materiais (coorientadora)"
+  - given-names: "Ana Alice"
+    family-names: "Normandia de Lacerda"
+    affiliation: "Universidade Federal de Lavras — UFLA, Engenharia Química (coorientadora)"
+repository-code: "https://github.com/cauafdev/bioetanol-soro-de-leite"
+url: "https://github.com/cauafdev/bioetanol-soro-de-leite"
+license: MIT
+date-released: "2026-09-25"
+keywords:
+  - bioethanol
+  - cheese-whey
+  - fermentation
+  - statistics
+  - science-education

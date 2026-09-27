@@ -1,7 +1,7 @@
 # Como rodar em um PC novo (do zero)
 
-Guia direto para deixar o **site da feira** (`site/`) rodando em qualquer computador Windows que
-nunca teve nada deste projeto instalado. Leva uns 5 minutos.
+Guia direto para deixar o **site da feira** (`index.html` + `assets/`, na raiz do repositório)
+rodando em qualquer computador Windows que nunca teve nada deste projeto instalado. Leva uns 5 minutos.
 
 ## 1. Pré-requisitos
 
@@ -29,15 +29,12 @@ git clone https://github.com/cauafdev/bioetanol-soro-de-leite.git
 cd bioetanol-soro-de-leite
 ```
 
-(Se o repositório estiver privado, o Git vai pedir login do GitHub na primeira vez — use a conta
-`cauafdev` ou peça para adicionar o novo usuário como colaborador em
-`github.com/cauafdev/bioetanol-soro-de-leite/settings/access`.)
+(O repositório é público — não é preciso login do GitHub para clonar.)
 
 ## 3. Instalar as dependências do site
 
 ```powershell
-cd site
-python -m pip install -r requirements.txt
+python -m pip install flask
 ```
 
 ## 4. Rodar
@@ -71,8 +68,8 @@ Abra o navegador em **http://localhost:8000** e deixe em tela cheia (F11).
 - **`'pip' não é reconhecido...`** — use `python -m pip install -r requirements.txt` (com `-m`) em
   vez de só `pip install`.
 - **Porta 8000 já em uso** — outro programa já está usando essa porta. Feche-o, ou edite a última
-  linha de `site/server.py` trocando `port=8000` por outra porta (ex.: `port=8080`) e acesse
+  linha de `server.py` trocando `port=8000` por outra porta (ex.: `port=8080`) e acesse
   `http://localhost:8080`.
 - **Quer usar o chat com IA local também (Fase 3, `webapp/`)** — isso é opcional e dá mais trabalho
   (precisa instalar o Ollama, baixar um modelo de ~2GB). Siga `webapp/README.md` separadamente; não
-  é necessário para o site principal (`site/`) funcionar.
+  é necessário para o site principal funcionar.
