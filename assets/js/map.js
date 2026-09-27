@@ -133,16 +133,27 @@ function renderRankingTable() {
   });
 }
 
-async function loadMap() {
+function loadMap() {
   const container = document.getElementById("map-svg-container");
   try {
-    const resp = await fetch("assets/vendor/brazil_states.svg");
-    const svgText = await resp.text();
-    container.innerHTML = svgText;
+    // Mapa embutido como string em map-svg.js (nao via fetch): fetch() de
+    // arquivo local e bloqueado por CORS quando o site e aberto direto
+    // (file://, sem servidor) - o site precisa funcionar sem servidor.
+    container.innerHTML = BRAZIL_STATES_SVG_MARKUP;
     const svg = container.querySelector("svg");
     svg.removeAttribute("width");
     svg.removeAttribute("height");
     svg.setAttribute("preserveAspectRatio", "xMidYMid meet");
+    svg.setAttribute("role", "img");
+    svg.setAttribute("aria-label", "Mapa do Brasil colorido por produção de leite em 2019, por estado — mais escuro é maior produção. A tabela de ranking logo abaixo lista os 10 maiores produtores em texto.");
+
+    // O SVG original (Wikimedia/CorelDRAW) tem um retangulo de fundo
+    // invisivel (fill:none/stroke:none) 10x mais largo que o viewBox real
+    // - nao aparece visualmente, mas com overflow:visible (necessario para
+    // o efeito de hover) ele forcava a pagina inteira a ficar rolavel na
+    // horizontal. Remove-lo aqui e seguro: ele nunca desenhou nada.
+    const oversizedBackgroundRect = container.querySelector("#path9");
+    if (oversizedBackgroundRect) oversizedBackgroundRect.remove();
 
     Object.entries(STATE_INDEX).forEach(([code, s]) => {
       const el = container.querySelector(`#state-${code}`);
