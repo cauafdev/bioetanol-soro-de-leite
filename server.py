@@ -14,19 +14,23 @@ from pathlib import Path
 
 from flask import Flask, send_from_directory
 
-SITE_DIR = Path(__file__).resolve().parent
+ROOT_DIR = Path(__file__).resolve().parent
+ASSETS_DIR = ROOT_DIR / "assets"
 
 app = Flask(__name__, static_folder=None)
 
 
 @app.get("/")
 def index():
-    return send_from_directory(SITE_DIR, "index.html")
+    return send_from_directory(ROOT_DIR, "index.html")
 
 
-@app.get("/<path:filename>")
-def static_files(filename: str):
-    return send_from_directory(SITE_DIR, filename)
+@app.get("/assets/<path:filename>")
+def assets(filename: str):
+    # Restrito a assets/ de proposito: o resto do repositorio (notebooks,
+    # dados, .git) nao deve ficar acessivel via HTTP quando o servidor
+    # roda com host="0.0.0.0" (visivel na rede local).
+    return send_from_directory(ASSETS_DIR, filename)
 
 
 if __name__ == "__main__":

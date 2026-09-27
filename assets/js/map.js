@@ -136,7 +136,7 @@ function renderRankingTable() {
 async function loadMap() {
   const container = document.getElementById("map-svg-container");
   try {
-    const resp = await fetch("vendor/brazil_states.svg");
+    const resp = await fetch("assets/vendor/brazil_states.svg");
     const svgText = await resp.text();
     container.innerHTML = svgText;
     const svg = container.querySelector("svg");
