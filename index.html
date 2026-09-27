@@ -97,7 +97,7 @@
       </div>
 
       <div class="card how-it-works">
-        <div class="molecule-stage" id="molecule-stage"><!-- preenchido via JS (Three.js) --></div>
+        <div class="molecule-stage" id="molecule-stage" role="img" aria-label="Modelo 3D interativo da molécula de etanol (C₂H₅OH), girando sozinho e arrastável com o mouse — 2 átomos de carbono (cinza), 1 de oxigênio (vermelho) e 6 de hidrogênio (branco), coordenadas reais do PubChem."><!-- preenchido via JS (Three.js) --></div>
         <div class="molecule-caption">
           <span class="molecule-legend"><span class="molecule-dot" style="background:#e0342c"></span>Oxigênio</span>
           <span class="molecule-legend"><span class="molecule-dot" style="background:#4a4a4a"></span>Carbono</span>
@@ -212,9 +212,10 @@
             </div>
           </div>
           <div class="chart-wrap">
-            <canvas id="sim-chart-canvas"></canvas>
+            <canvas id="sim-chart-canvas" role="img" aria-label="Gráfico de linha"></canvas>
           </div>
           <div class="chart-legend-note" id="chart-note"></div>
+          <table class="sr-only-table" id="chart-table-fallback"><caption>Versão em tabela do gráfico acima, para leitores de tela</caption></table>
         </div>
 
       </div>
@@ -331,6 +332,39 @@
         </div>
       </div>
       <div id="references-list"><!-- preenchido via JS --></div>
+
+      <div class="section-head" style="margin-top:2.4rem;">
+        <div>
+          <div class="kicker">QUEM FEZ</div>
+          <h2>Sobre a equipe</h2>
+        </div>
+      </div>
+      <div class="card team-card">
+        <div class="team-group">
+          <div class="team-role">Estudantes</div>
+          <ul class="team-list">
+            <li>Cauã Lara Fernando</li>
+            <li>Giovanni Marques Ferreira</li>
+            <li>Otávio Zanquini de Souza</li>
+          </ul>
+        </div>
+        <div class="team-group">
+          <div class="team-role">Professor orientador</div>
+          <ul class="team-list">
+            <li>André Luiz de Paiva Godinho — Professor de Química, Colégio IMP</li>
+          </ul>
+        </div>
+        <div class="team-group">
+          <div class="team-role">Coorientadoras (UFLA)</div>
+          <ul class="team-list">
+            <li>Fernanda Neves Miranda — Engenharia de Materiais</li>
+            <li>Ana Alice Normandia de Lacerda — Engenharia Química</li>
+          </ul>
+        </div>
+        <p class="ref-note" style="margin-top:1rem;">Instituições: Colégio IMP (Lavras-MG) e Laboratório G-Óleo — Universidade Federal de Lavras (UFLA). Projeto apresentado na III Feira do Conhecimento do Colégio IMP, 2026. Repositório completo, com metodologia e código:
+          <a href="https://github.com/cauafdev/bioetanol-soro-de-leite" target="_blank" rel="noopener">github.com/cauafdev/bioetanol-soro-de-leite</a>.
+        </p>
+      </div>
     </section>
 
     <!-- ===================== MAPA DO BRASIL ===================== -->
@@ -400,6 +434,7 @@
 <script src="assets/js/molecule.js"></script>
 <script src="assets/js/app.js"></script>
 <script src="assets/js/map-data.js"></script>
+<script src="assets/js/map-svg.js"></script>
 <script src="assets/js/map.js"></script>
 </body>
 </html>
