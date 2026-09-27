@@ -14,10 +14,11 @@ Esta pasta contém quatro fases do mesmo projeto:
 - **Fase 3 — chat com IA local** (`webapp/`): um site com chat de IA (Ollama, 100% local/offline, sem
   custo) que responde perguntas de visitantes com base na base de conhecimento gerada a partir de
   `data/` e `src/models.py`. Ver `webapp/README.md`.
-- **Fase 4 — site interativo final** (`site/`): o site usado na apresentação da feira — visão geral,
-  simulador com gráficos ao vivo, molécula 3D de etanol (Three.js, dados reais do PubChem), mapa do
-  Brasil por produção de leite (Embrapa/IBGE) e um chatbot embutido (SoroBot/Botpress). 100% estático,
-  sem dependência de servidor Python além de um serviço de arquivos simples — ver `site/server.py`.
+- **Fase 4 — site interativo final** (`index.html` + `assets/`, na raiz do repositório — é o "site
+  publicado" deste repositório): visão geral, simulador com gráficos ao vivo, molécula 3D de etanol
+  (Three.js, dados reais do PubChem), mapa do Brasil por produção de leite (Embrapa/IBGE) e um chatbot
+  embutido (SoroBot/Botpress). 100% estático, sem dependência de servidor Python além de um serviço de
+  arquivos simples — ver `server.py`. Publicado via GitHub Pages (link no topo deste README).
 
 ## Como rodar
 
@@ -44,15 +45,15 @@ streamlit run app/Home.py
 
 Abre em `http://localhost:8501`. Para exibir na feira, deixe em tela cheia no navegador (F11).
 
-**Site final da feira (Fase 4), rodar a partir de `site/`:**
+**Site final da feira (Fase 4), rodar a partir da raiz do repositório:**
 
 ```bash
-cd site
 python server.py
 ```
 
-Abre em `http://localhost:8000`. Site estático (sem IA, sem chave de API) — só a aba "SoroBot" carrega
-um chatbot externo (Botpress) e precisa de internet; o resto funciona 100% offline.
+Abre em `http://localhost:8000`. Nenhum cálculo do site usa IA (simulador, mapa e balanço de massa
+rodam em JavaScript puro, espelhando `src/models.py`) — só a aba "SoroBot" carrega um chatbot externo
+(Botpress) e precisa de internet; o resto funciona 100% offline.
 
 **Chat com IA local (Fase 3), rodar a partir de `webapp/`:** ver `webapp/README.md` (requer Ollama
 instalado).
@@ -60,9 +61,19 @@ instalado).
 ## Estrutura
 
 ```
+index.html                        - site publicado (Fase 4) — abre com server.py ou GitHub Pages
+server.py                         - servidor local do site (só serve arquivos estáticos)
+assets/
+  css/style.css                   - tema visual do site (paleta violeta, dataviz skill)
+  js/                              - motor de cálculo do site (espelha src/models.py) + simulador +
+                                     mapa + molécula 3D + referências
+  vendor/                         - bibliotecas vendorizadas (Chart.js, Three.js, mapa SVG do Brasil)
+  photos/                         - fotos reais do experimento (extraídas do relatório .docx)
+  figures/                        - gráficos estáticos exportados pelos notebooks (PNG)
 data/
   raw/dados_experimentais.csv     - dados MEDIDOS no experimento (extraídos do relatório)
   external/dados_externos.csv     - dados de fontes externas, com URL/data/confiabilidade
+  processed/                      - tabelas derivadas usadas nos gráficos (ver processed/README.md)
   README.md                       - lacunas de dados conhecidas e decisões tomadas
 notebooks/
   01_data_audit.ipynb             - auditoria dos dados experimentais
@@ -72,17 +83,26 @@ notebooks/
   05_sensitivity_analysis.ipynb   - análise de sensibilidade + Monte Carlo (preço do etanol)
   06_final_results.ipynb          - consolidação e conclusão final
 src/
-  models.py                       - toda a lógica de cálculo, reutilizável (notebooks E site)
-app/
+  models.py                       - toda a lógica de cálculo, reutilizável (notebooks, app/, webapp/ e
+                                     fonte da porta em JavaScript usada pelo site)
+docs/
+  metodologia.md                  - metodologia experimental e estatística por extenso
+  referencias-ABNT.md             - bibliografia no padrão ABNT NBR 6023
+  relatorio-original.docx         - relatório completo do projeto (fonte de todos os dados brutos)
+app/                               - Fase 2: site Streamlit (ver corpo deste README)
   Home.py                         - página inicial do site
   pages/                          - Experimento, Resultados, Simulador, Metodologia e Fontes
   utils/styling.py                - paleta, tipografia e componentes visuais (dataviz skill)
   utils/data.py                   - ponte entre o site e src/models.py + gráficos Plotly
-assets/photos/                    - fotos reais do experimento (extraídas do relatório .docx)
-reports/figures/                  - gráficos estáticos exportados pelos notebooks (PNG)
 webapp/                           - Fase 3: chat com IA local (Ollama), ver webapp/README.md
-site/                             - Fase 4: site final da feira (estático + simulador + mapa + molécula 3D)
+LICENSE                           - MIT (código) + CC BY 4.0 (dados/texto/figuras) — ver seção de licença
+CITATION.cff                      - como citar este projeto
 ```
+
+`app/` e `webapp/` são fases anteriores do projeto (mantidas por completude e porque ainda funcionam
+de forma independente); a estrutura `/analysis` sugerida por guias genéricos de pesquisa reprodutível
+é cumprida aqui por `notebooks/` + `src/` juntos — não foram renomeados para não quebrar os imports
+relativos já usados por `app/`, `webapp/` e pelos próprios notebooks.
 
 ## Princípio seguido em toda a pesquisa
 

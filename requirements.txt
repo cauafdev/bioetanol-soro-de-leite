@@ -9,3 +9,6 @@ ipykernel>=6.29
 # Fase 2 - site (Streamlit)
 streamlit>=1.36
 plotly>=5.22
+
+# Fase 4 - site final da feira (server.py)
+flask>=3.0

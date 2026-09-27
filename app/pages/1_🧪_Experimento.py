@@ -130,7 +130,7 @@ with bcol2:
     df_show = df[df["tipo"].isin(tipo_filter)][["variavel", "valor", "unidade", "tipo"]]
     st.dataframe(df_show, use_container_width=True, height=320, hide_index=True)
     source_note(
-        "Fonte: relatório do projeto (PROJETO_BIOETANOL_SORO_DE_LEITE_relatorio.docx), "
+        "Fonte: relatório do projeto (docs/relatorio-original.docx), "
         "extraído linha a linha em notebooks/01_data_audit.ipynb. FALTANTE = variável "
         "que o processo científico exigiria mas não foi determinada nesta execução."
     )

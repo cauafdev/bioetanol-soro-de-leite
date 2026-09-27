@@ -28,7 +28,7 @@ with tab1:
     df = load_experimental_df()
     st.dataframe(df, use_container_width=True, height=560, hide_index=True)
     source_note(
-        "Extraído linha a linha de PROJETO_BIOETANOL_SORO_DE_LEITE_relatorio.docx "
+        "Extraído linha a linha de docs/relatorio-original.docx "
         "(notebooks/01_data_audit.ipynb). FALTANTE = variável que o processo "
         "científico exigiria mas não foi determinada nesta execução."
     )
