@@ -62,8 +62,10 @@ s1, s2, s3, s4 = st.columns(4)
 with s1:
     stat_tile("Soro de leite processado", "250 mL", help_text="Medido — laticínio local, Lavras-MG")
 with s2:
-    stat_tile("Destilado obtido", "15 mL", delta="6,0% v/v sobre o soro", delta_color="muted",
-               help_text="Medido — destilação fracionada, coleta a 78 °C")
+    stat_tile("Destilado obtido", "15 mL", delta="6,0% do volume de soro (rendimento)", delta_color="muted",
+               help_text="Medido — 15 mL de destilado a partir de 250 mL de soro (destilação fracionada, "
+                          "coleta a 78 °C). Isto é uma razão de VOLUME (destilado/soro), não o teor "
+                          "alcoólico do destilado — que não foi medido (ver cartão ao lado).")
 with s3:
     stat_tile("Teste de chama", "Positivo", delta="Chama sem coloração visível", delta_color="good",
                help_text="Evidência qualitativa de etanol")

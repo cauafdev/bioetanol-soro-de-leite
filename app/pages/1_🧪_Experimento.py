@@ -119,6 +119,8 @@ with bcol1:
     st.metric("Filtrado (pós-desproteinização)", "160 mL", "64,0% do volume inicial", delta_color="off")
     st.metric("Mosto submetido à destilação", "160 mL", "64,0% do volume inicial", delta_color="off")
     st.metric("Destilado obtido", "15 mL", "6,0% do volume inicial", delta_color="off")
+    st.caption("6,0% é a razão volume de destilado / volume de soro (15 mL / 250 mL) — **não** é o "
+               "teor alcoólico do destilado, que nunca foi medido (ver aba Metodologia).")
 
 with bcol2:
     st.markdown("**Todos os dados experimentais** (classificados por tipo)")
